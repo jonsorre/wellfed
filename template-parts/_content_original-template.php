@@ -24,8 +24,6 @@
 		</div><!-- .entry-meta -->
 		<?php endif;?>
 
-		<?php tasman_post_thumbnail();?>
-
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -34,36 +32,35 @@
 		endif;
 		?>
 
-		<div class="entry-dek">
-			<h2><?php
-			if ( is_singular() ) :
-				the_field( 'post_dek');
-			else :
-				the_field( 'post_dek');
-			endif;
-			?></h2>
-		</div>
+		<?php tasman_post_thumbnail();?>
 
 	</header><!-- .entry-header -->
 
 	<?php if( is_singular() || post_password_required() ) : ?>
 	<div class="entry-content">
-			<?php
-				the_content();
+		<?php
+			the_content( sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'tasman' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			) );
 
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'tasman' ),
-					'after'  => '</div>',
-				) );
-			?>
-		</div><!-- .entry-content -->
-
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'tasman' ),
+				'after'  => '</div>',
+			) );
+		?>
+	</div><!-- .entry-content -->
 	<?php else : ?>
 	<div class="entry-summary">
-
-		<a class="read-more-link" href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark">
-		Read More
-	</a>
+		<?php the_excerpt();?>
 	</div><!-- .entry-summary -->
 	<?php endif;?>
 
