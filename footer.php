@@ -17,6 +17,22 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrap">
+
+			<?php
+			if ( has_nav_menu( 'menu-3' ) ) : ?>
+				<nav class="page-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Page Links Menu', 'tasman' ); ?>">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-3',
+							'menu_class'     => 'page-links-menu',
+							'depth'          => 1,
+							'link_before'    => '<span class="footer-link">',
+							'link_after'     => '</span>',
+						) );
+					?>
+				</nav><!-- .social-navigation -->
+			<?php endif;?>
+
 			<?php
 			if ( has_nav_menu( 'menu-2' ) ) : ?>
 				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'tasman' ); ?>">
@@ -30,8 +46,8 @@
 						) );
 					?>
 				</nav><!-- .social-navigation -->
-			<?php endif;
-			tasman_do_footer_copyright();?>
+			<?php endif;?>
+			<p>Copyright 🍽️ 2018 wellfed.</p>
 		</div><!-- .wrap -->
 	</footer><!-- #colophon -->
 

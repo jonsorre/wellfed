@@ -1071,7 +1071,7 @@ a:hover {
     display: table;
     position: relative;
     width: 100%;
-    background-color: #000;
+    background-color: white;
     text-align: center;
     height:375px;
 }
@@ -1220,7 +1220,17 @@ a.custom-logo-link {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border-top: 1px solid rgba(0, 0, 0, .05);
-    text-align: center
+    text-align: center;
+    background:#ef353e;
+    color:white;
+}
+
+.page-navigation li {
+    display: inline;
+}
+
+.footer-link {
+    color:white;
 }
 
 .site-designer {
@@ -3169,8 +3179,8 @@ object {
         height: 75vh
     }
     .has-header-image:not(.has-header-video) .wp-custom-header {
-        -webkit-animation: fadein 2.5s ease-out backwards;
-        animation: fadein 2.5s ease-out backwards
+        -webkit-animation: fadein .5s ease-in-out backwards;
+        animation: fadein .5s ease-in-out backwards
     }
     .wrap {
         max-width: 960px;
