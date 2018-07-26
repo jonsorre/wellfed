@@ -1076,6 +1076,14 @@ a:hover {
     height:375px;
 }
 
+.site-logo {
+    position:absolute;
+    max-width:150px;
+    left: 50%;
+    margin-left: -75px;
+    top: 30px;
+}
+
 .custom-header-media {
     overflow: hidden;
     position: absolute;
@@ -1162,7 +1170,7 @@ a:hover {
 }
 
 .site-branding {
-    /*display: table-cell;*/
+    display: table-cell;
     position: relative;
     width: 100%;
     height: 100%;
@@ -1264,7 +1272,7 @@ a.custom-logo-link {
 }
 
 .admin-bar .return-to-top {
-    top: 2.75rem
+    bottom: 1rem
 }
 
 .return-to-top:focus,

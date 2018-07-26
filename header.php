@@ -26,7 +26,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<?php get_template_part( 'template-parts/header', 'image' );?>
-		<div class="site-branding">
+		
 			<?php
 
 			// tasman_custom_logo();
@@ -37,6 +37,7 @@
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/wellfed-red.png" />
 						</a>
 					</div>
+					<div class="site-branding">
 					<!-- Begin MailChimp Signup Form -->
 					<h5>love food.</h5>
 					<p>Stay in the know about new episodes, events, and products 🍽️</p>
