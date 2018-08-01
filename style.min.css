@@ -238,9 +238,7 @@ optgroup,
 select,
 textarea {
     color: #ef353e;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: var(--hed-s);
     line-height: 1.5
     /*this is a test*/
 }
@@ -252,11 +250,14 @@ h4,
 h5,
 h6 {
     clear: both;
-    margin: 0 0 1.5rem
+    /*margin: 0 0 1.5rem*/
 }
 
 p {
-    margin: 0 0 1.5rem
+    margin: 0 0 1.5rem;
+    font-size: var(--body);
+    font-family: var(--body-font);
+    line-height:var(--body-line-height);
 }
 
 cite,
@@ -477,7 +478,7 @@ button,
 input[type=button],
 input[type=reset],
 input[type=submit] {
-    padding: 1rem 1.25rem;
+    padding: 10px 15px;
     border: none;
     border-radius: .25rem;
     color: rgba(255, 255, 255, .8);
@@ -504,7 +505,7 @@ input[type=submit]:active,
 input[type=submit]:focus,
 input[type=submit]:hover {
     color: #fff;
-    background-color: #e64a19
+    background-color: var(--brand-color)
 }
 
 input[type=color],
@@ -572,7 +573,7 @@ a {
 a:active,
 a:focus,
 a:hover {
-    color: #e64a19
+    color: var(--brand-color)
 }
 
 a:focus {
@@ -865,7 +866,7 @@ a:hover {
 .post-navigation a:hover,
 .posts-navigation a:focus,
 .posts-navigation a:hover {
-    color: #e64a19
+    color: var(--brand-color)
 }
 
 .comment-navigation a:focus span,
@@ -908,7 +909,7 @@ a:hover {
 .posts-navigation .nav-next a:hover,
 .posts-navigation .nav-previous a:focus,
 .posts-navigation .nav-previous a:hover {
-    color: #e64a19
+    color: var(--brand-color)
 }
 
 .pagination {
@@ -962,7 +963,7 @@ a:hover {
 
 .page-numbers:focus:not(.current),
 .page-numbers:hover:not(.current) {
-    color: #e64a19
+    color: var(--brand-color)
 }
 
 .page-numbers.dots:focus,
@@ -1172,24 +1173,26 @@ a:hover {
 .site-branding {
     display: table-cell;
     position: relative;
-    width: 100%;
+    max-width: 100%;
     height: 100%;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
     vertical-align: middle;
-    text-transform: uppercase
+    padding: 2rem 15px 3rem 15px;
 }
 
-.site-branding,
-.site-branding a {
-    color: #fff
+.site-branding h5 {
+    font-size:var(--hed-l);
+    font-family:var(--hed-font);
+    line-height:var(--hed-line-height);
+    -webkit-text-fill-color: var(--brand-color);
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: var(--fill-color);
+    margin-bottom:10px;
 }
 
-.site-branding a:focus,
-.site-branding a:hover,
-.site-branding:focus,
-.site-branding:hover {
-    color: #fff
+.site-branding p {
+    color:var(--fill-color);
+    width:345px;
+    margin:0 auto 30px;
 }
 
 .site-description,
@@ -1307,7 +1310,6 @@ a.custom-logo-link {
 }
 
 .entry-content,
-.entry-summary,
 .page-content {
     margin-bottom: 1.5rem
 }
@@ -1385,19 +1387,34 @@ a.custom-logo-link {
 
 .entry-title {
     position: relative;
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1;
-    text-transform: uppercase
-}
-
-.entry-title a {
-    color: #404040
+    font-size: var(--hed-l-s);
+    font-family: var(--hed-font);
+    line-height:var(--hed-line-height);
+    -webkit-text-fill-color: var(--fill-color);
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: var(--brand-color);
+    /*text-transform: uppercase*/
 }
 
 .entry-title a:focus,
 .entry-title a:hover {
-    color: #e64a19
+    color: var(--brand-color);
+}
+
+.entry-title a:visited {
+    -webkit-text-fill-color: var(--fill-color);
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: var(--brand-color);
+}
+
+.entry-dek {
+    font-size:var(--hed-m);
+    font-family:var(--hed-font);
+    line-height:var(--hed-line-height);
+}
+
+.entry-summary {
+    text-align:center;
 }
 
 .single-content .entry-title {
@@ -1534,7 +1551,7 @@ a.more-link {
 
 .entry-footer a:focus,
 .entry-footer a:hover {
-    color: #e64a19
+    color: var(--brand-color)
 }
 
 .entry-footer .cat-links,
@@ -1612,7 +1629,7 @@ h2.about-author {
 
 .author-title a:focus,
 .author-title a:hover {
-    color: #e64a19
+    color: var(--brand-color)
 }
 
 .search-results .entry-footer,
@@ -3200,8 +3217,7 @@ object {
         max-width: 960px
     }
     .entry-title {
-        font-size: 32px;
-        font-size: 2rem
+        font-size: var(--hed-l);
     }
     #secondary .widget {
         width: 33.33%

@@ -226,8 +226,12 @@ function tasman_scripts() {
 	wp_dequeue_style( 'contact-form-7' );
 
 	/** Styles */
+	wp_enqueue_style( 'reset-style', get_theme_file_uri( "/reset.css" ) );
 	wp_enqueue_style( 'tasman-style', get_theme_file_uri( "/style$suffix.css" ) );
 	wp_style_add_data( 'tasman-style', 'rtl', 'replace' );
+	wp_enqueue_style( 'custom-font-style', get_theme_file_uri( "/var.css" ) );
+	wp_enqueue_style( 'email-form-styling', get_theme_file_uri( "/email-form.css" ) );
+
 
 	/** lt IE 9 script */
 	wp_enqueue_script( 'html5shiv', get_theme_file_uri( "/assets/js/ie/html5shiv$suffix.js" ), array(), '3.7.3' );

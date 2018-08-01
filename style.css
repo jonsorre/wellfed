@@ -554,7 +554,7 @@ input[type="submit"]:hover,
 input[type="submit"]:active,
 input[type="submit"]:focus {
 	color: white;
-	background-color: #e64a19;
+	background-color: var(--brand-color);
 }
 
 input[type="text"],
@@ -632,7 +632,7 @@ a {
 a:hover,
 a:focus,
 a:active {
-	color: #e64a19;
+	color: var(--brand-color);
 }
 
 a:focus {
@@ -935,7 +935,7 @@ a:active {
 .posts-navigation a:focus,
 .post-navigation a:hover,
 .post-navigation a:focus {
-	color: #e64a19;
+	color: var(--brand-color);
 }
 
 .comment-navigation a:hover span,
@@ -978,7 +978,7 @@ a:active {
 .posts-navigation .nav-previous a:focus,
 .posts-navigation .nav-next a:hover,
 .posts-navigation .nav-next a:focus {
-	color: #e64a19;
+	color: var(--brand-color);
 }
 
 .pagination {
@@ -1032,7 +1032,7 @@ a:active {
 
 .page-numbers:hover:not(.current),
 .page-numbers:focus:not(.current) {
-	color: #e64a19;
+	color: var(--brand-color);
 }
 
 .page-numbers.dots:hover,
@@ -1492,7 +1492,7 @@ a.custom-logo-link {
 
 .entry-title a:hover,
 .entry-title a:focus {
-	color: #e64a19;
+	color: var(--brand-color);
 }
 
 .single-content .entry-title {
@@ -1629,7 +1629,7 @@ a.more-link {
 
 .entry-footer a:hover,
 .entry-footer a:focus {
-	color: #e64a19;
+	color: var(--brand-color);
 }
 
 .entry-footer .cat-links,
@@ -1707,7 +1707,7 @@ h2.about-author {
 
 .author-title a:hover,
 .author-title a:focus {
-	color: #e64a19;
+	color: var(--brand-color);
 }
 
 .search-results .entry-header,
