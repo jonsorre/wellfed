@@ -44,6 +44,12 @@
 			?></h2>
 		</div>
 
+		<?php if ( is_singular() || post_password_required() ) :?>
+			<div class="entry-media">
+				<span>As told to <?php the_author(); ?> on <?php echo get_the_date(); ?></span>
+			</div>
+		<?php endif;?>
+
 	</header><!-- .entry-header -->
 
 	<?php if( is_singular() || post_password_required() ) : ?>
@@ -61,7 +67,7 @@
 	<?php else : ?>
 	<div class="entry-summary">
 
-		<a class="read-more-link" href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark">
+		<a id="read" class="more-link" href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark">
 		Read More
 	</a>
 	</div><!-- .entry-summary -->

@@ -21,7 +21,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
 
 html {
-    font-family: sans-serif;
+    font-family: var(--hed-font);
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%
 }
@@ -238,9 +238,7 @@ optgroup,
 select,
 textarea {
     color: #ef353e;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: var(--hed-s);
     line-height: 1.5
     /*this is a test*/
 }
@@ -252,11 +250,14 @@ h4,
 h5,
 h6 {
     clear: both;
-    margin: 0 0 1.5rem
+    /*margin: 0 0 1.5rem*/
 }
 
 p {
-    margin: 0 0 1.5rem
+    margin: 0 0 30px;
+    font-size: var(--body);
+    font-family: var(--body-font);
+    line-height:var(--body-line-height);
 }
 
 cite,
@@ -477,7 +478,7 @@ button,
 input[type=button],
 input[type=reset],
 input[type=submit] {
-    padding: 1rem 1.25rem;
+    padding: 10px 15px;
     border: none;
     border-radius: .25rem;
     color: rgba(255, 255, 255, .8);
@@ -504,7 +505,7 @@ input[type=submit]:active,
 input[type=submit]:focus,
 input[type=submit]:hover {
     color: #fff;
-    background-color: #e64a19
+    background-color: var(--brand-color)
 }
 
 input[type=color],
@@ -572,7 +573,7 @@ a {
 a:active,
 a:focus,
 a:hover {
-    color: #e64a19
+    color: var(--brand-color)
 }
 
 a:focus {
@@ -780,7 +781,7 @@ a:hover {
 }
 
 .social-navigation {
-    margin-bottom: 1.5rem
+    margin-bottom: 80px;
 }
 
 .social-navigation li,
@@ -865,7 +866,7 @@ a:hover {
 .post-navigation a:hover,
 .posts-navigation a:focus,
 .posts-navigation a:hover {
-    color: #e64a19
+    color: var(--brand-color)
 }
 
 .comment-navigation a:focus span,
@@ -908,7 +909,7 @@ a:hover {
 .posts-navigation .nav-next a:hover,
 .posts-navigation .nav-previous a:focus,
 .posts-navigation .nav-previous a:hover {
-    color: #e64a19
+    color: var(--brand-color)
 }
 
 .pagination {
@@ -962,7 +963,7 @@ a:hover {
 
 .page-numbers:focus:not(.current),
 .page-numbers:hover:not(.current) {
-    color: #e64a19
+    color: var(--brand-color)
 }
 
 .page-numbers.dots:focus,
@@ -1076,12 +1077,17 @@ a:hover {
     height:375px;
 }
 
-.site-logo {
+.header-logo {
     position:absolute;
     max-width:150px;
     left: 50%;
     margin-left: -75px;
     top: 30px;
+}
+
+.footer-logo {
+    max-width:150px;
+    margin:30px auto 80px;
 }
 
 .custom-header-media {
@@ -1172,24 +1178,26 @@ a:hover {
 .site-branding {
     display: table-cell;
     position: relative;
-    width: 100%;
+    max-width: 100%;
     height: 100%;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
     vertical-align: middle;
-    text-transform: uppercase
+    padding: 2rem 15px 3rem 15px;
 }
 
-.site-branding,
-.site-branding a {
-    color: #fff
+.site-branding h5 {
+    font-size:var(--hed-l);
+    font-family:var(--hed-font);
+    line-height:var(--hed-line-height);
+    /*-webkit-text-fill-color: rgba(239, 53, 62, 0);*/
+    /*-webkit-text-stroke-width: 1.5px;*/
+    /*-webkit-text-stroke-color: var(--fill-color);*/
+    color:white;
 }
 
-.site-branding a:focus,
-.site-branding a:hover,
-.site-branding:focus,
-.site-branding:hover {
-    color: #fff
+.site-branding p {
+    color:var(--fill-color);
+    width:345px;
+    margin:0 auto 30px;
 }
 
 .site-description,
@@ -1221,7 +1229,7 @@ a.custom-logo-link {
 }
 
 .site-content {
-    padding-top: 3rem
+    padding-top: 60px;
 }
 
 .site-footer {
@@ -1235,10 +1243,17 @@ a.custom-logo-link {
 
 .page-navigation li {
     display: inline;
+    font-size:var(--hed-m);
+    padding:0 10px;
 }
 
 .footer-link {
     color:white;
+}
+
+#copyright-text {
+    font-size:var(--hed-s);
+    font-family:var(--body-font);
 }
 
 .site-designer {
@@ -1298,7 +1313,7 @@ a.custom-logo-link {
 }
 
 .entry {
-    margin: 0 0 3rem;
+    margin: 0 0 60px;
     word-wrap: break-word
 }
 
@@ -1307,7 +1322,6 @@ a.custom-logo-link {
 }
 
 .entry-content,
-.entry-summary,
 .page-content {
     margin-bottom: 1.5rem
 }
@@ -1385,24 +1399,54 @@ a.custom-logo-link {
 
 .entry-title {
     position: relative;
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1;
-    text-transform: uppercase
-}
-
-.entry-title a {
-    color: #404040
+    font-size: var(--hed-l-s);
+    font-family: var(--hed-font);
+    line-height:var(--alt-hed-line-height);
+    -webkit-text-fill-color: var(--fill-color);
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: var(--brand-color);
+    margin-bottom:20px;
+    /*text-transform: uppercase*/
 }
 
 .entry-title a:focus,
 .entry-title a:hover {
-    color: #e64a19
+    color: var(--brand-color);
+}
+
+.entry-title a:visited {
+    -webkit-text-fill-color: var(--fill-color);
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: var(--brand-color);
+}
+
+.entry-dek {
+    font-size:var(--hed-m);
+    font-family:var(--hed-font);
+    line-height:var(--hed-line-height);
+}
+
+.entry-summary {
+    text-align:center;
+    margin-top:20px;
+}
+
+.single-content .site-content {
+    padding-top:0px;
+}
+
+.single-content .entry-header {
+    border-bottom:1px solid var(--brand-color);
+    max-width:640px;
+    margin:0 auto 30px;
 }
 
 .single-content .entry-title {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem
+    margin-bottom: 30px;
+}
+
+.single-content .entry-dek {
+    margin-bottom: 30px;
 }
 
 /*.single-content .entry-title:after,
@@ -1449,14 +1493,16 @@ a.custom-logo-link {
 }
 
 .entry-media {
-    margin-bottom: 1.5rem
+    margin-bottom: 30px;
+    font-family:var(--body-font);
+    font-size:var(--hed-s);
 }
 
 .post-thumbnail {
     display: inline-block;
     overflow: hidden;
     position: relative;
-    margin-bottom: 1.5rem;
+    margin-bottom: 10px;
     background-color: #000
 }
 
@@ -1511,8 +1557,16 @@ a.custom-logo-link {
     border: 10px solid rgba(0, 0, 0, .05)
 }
 
-a.more-link {
-    font-weight: 700
+a#listen:before {
+    content:"▶";
+    font-size:1rem;
+}
+
+.more-link {
+    font-family: var(--body-font);
+    font-size: var(--body);
+    border-bottom: 1px solid red;
+    line-height: var(--body-line-height);
 }
 
 .entry-footer {
@@ -1534,7 +1588,7 @@ a.more-link {
 
 .entry-footer a:focus,
 .entry-footer a:hover {
-    color: #e64a19
+    color: var(--brand-color)
 }
 
 .entry-footer .cat-links,
@@ -1543,11 +1597,10 @@ a.more-link {
     margin-right: 1rem
 }
 
-.archive .entry-footer,
+/*.archive .entry-footer,
 .home .entry-footer {
     padding-bottom: 3rem;
-    border-bottom: 1px solid rgba(0, 0, 0, .1)
-}
+}*/
 
 .archive .entry:last-child .entry-footer,
 .home .entry:last-child .entry-footer {
@@ -1612,7 +1665,7 @@ h2.about-author {
 
 .author-title a:focus,
 .author-title a:hover {
-    color: #e64a19
+    color: var(--brand-color)
 }
 
 .search-results .entry-footer,
@@ -3184,7 +3237,7 @@ object {
 
 @media (min-width:992px) {
     .has-header-image .site-header {
-        height: 75vh
+        height: 80vh
     }
     .has-header-image:not(.has-header-video) .wp-custom-header {
         -webkit-animation: fadein .5s ease-in-out backwards;
@@ -3200,8 +3253,7 @@ object {
         max-width: 960px
     }
     .entry-title {
-        font-size: 32px;
-        font-size: 2rem
+        font-size: var(--hed-l);
     }
     #secondary .widget {
         width: 33.33%

@@ -1,0 +1,27 @@
+:root {
+    
+
+    /*Font Families*/
+
+    --hed-font: 'wf-bold', Arial Black, sans-serif;
+    --body-font: 'wf-reg', Arial, sans-serif;
+    
+    /*Typography*/
+
+    --body-line-height: 1.5;
+    --hed-line-height: 1.05;
+    --alt-hed-line-height: .9;
+    --text-weight:400;
+
+    --hed-l: 5.125rem;
+    --hed-m: 1.75rem;
+    --hed-s: 0.875rem;
+    --body: 1.313rem;
+
+    --hed-l-s: 2.625rem;
+    --hed-m-s: 1.313rem;
+
+    --fill-color: #fff;
+    --brand-color:#ef353e;
+
+}
