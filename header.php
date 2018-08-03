@@ -32,7 +32,7 @@
 			// tasman_custom_logo();
 
 			if ( is_front_page() && is_home() ) : ?>
-					<div class="site-logo">
+					<div class="header-logo">
 						<a href="<?php echo site_url(); ?>">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/wellfed-red.png" />
 						</a>
@@ -45,7 +45,6 @@
 					<div id="mc_embed_signup">
 						<form action="https://jonsorrentino.us12.list-manage.com/subscribe/post?u=170cc7d7b09ed97923ebe1131&amp;id=ebe9b04c09" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 							<div id="mc_embed_signup_scroll">
-
 							<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your email address here..." required>
 							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_170cc7d7b09ed97923ebe1131_ebe9b04c09" tabindex="-1" value=""></div>
@@ -56,7 +55,7 @@
 
 					<!--End mc_embed_signup-->
 			<?php else : ?>
-				<div class="site-logo">
+				<div class="header-logo">
 						<a href="<?php echo site_url(); ?>">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/wellfed-white.png" />
 						</a>

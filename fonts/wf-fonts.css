@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'wf-bold';
+    src: url('wf-bold.eot'),
+    	url('wf-bold.woff') format('woff'),
+    	url('wf-bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'wf-reg';
+    src: url('wf-regular.eot'),
+    	url('wf-regular.woff') format('woff'),
+    	url('wf-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}

@@ -18,6 +18,12 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrap">
 
+			<div class="footer-logo">
+						<a href="<?php echo site_url(); ?>">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/wellfed-red.png" />
+						</a>
+			</div>
+
 			<?php
 			if ( has_nav_menu( 'menu-3' ) ) : ?>
 				<nav class="page-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Page Links Menu', 'tasman' ); ?>">
@@ -47,7 +53,7 @@
 					?>
 				</nav><!-- .social-navigation -->
 			<?php endif;?>
-			<p>Copyright 🍽️ 2018 wellfed.</p>
+			<span id="copyright-text">Copyright 🍽️ 2018 wellfed.</span>
 		</div><!-- .wrap -->
 	</footer><!-- #colophon -->
 

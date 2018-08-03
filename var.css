@@ -3,14 +3,14 @@
 
     /*Font Families*/
 
-    /*--hed-font: 'ssextended', 'Helvetica Neue', Arial, sans-serif;*/
-    --hed-font: '', Arial Black, sans-serif;
-    --body-font: '', Arial, sans-serif;
+    --hed-font: 'wf-bold', Arial Black, sans-serif;
+    --body-font: 'wf-reg', Arial, sans-serif;
     
     /*Typography*/
 
     --body-line-height: 1.5;
     --hed-line-height: 1.05;
+    --alt-hed-line-height: .9;
     --text-weight:400;
 
     --hed-l: 5.125rem;
@@ -22,6 +22,6 @@
     --hed-m-s: 1.313rem;
 
     --fill-color: #fff;
-    --brand-color:var(--brand-color);
+    --brand-color:#ef353e;
 
 }

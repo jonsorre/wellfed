@@ -1,7 +1,10 @@
-.clear {
-    display:inline-block;
+div#mc_embed_signup_scroll {
+    border: 2px solid white;
+    width: 315px;
+    margin: 0 auto;
+    position: relative;
+    height: 40px;
 }
-
 
 input#mc-embedded-subscribe {
     background: white;
@@ -12,7 +15,7 @@ input#mc-embedded-subscribe {
 }
 
 input#mce-EMAIL {
-    border: 2px solid white;
+    border: 0;
     border-radius: 0;
     box-shadow: none;
     background: var(--brand-color);
@@ -20,4 +23,18 @@ input#mce-EMAIL {
     font-family: var(--hed-font);
     line-height: 1px;
     padding: 10px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.clear {
+    display: inline-block;
+    /* width: 24%; */
+    position: absolute;
+    right: 0;
+}
+
+input#mce-EMAIL::placeholder {
+    color:var(--fill-color);
 }

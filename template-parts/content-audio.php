@@ -34,12 +34,6 @@
 		endif;
 		?>
 
-		<?php if ( ! is_singular() && ! post_password_required() ) :?>
-			<div class="entry-media">
-				<?php echo tasman_media_grabber( array( 'type' => 'audio', 'split_media' => true ) ); // WPCS: XSS OK.?>
-			</div>
-		<?php endif;?>
-
 		<div class="entry-dek">
 			<h2><?php
 			if ( is_singular() ) :
@@ -49,6 +43,12 @@
 			endif;
 			?></h2>
 		</div>
+
+		<?php if ( is_singular() || post_password_required() ) :?>
+			<div class="entry-media">
+				<span>As told to <?php the_author(); ?> on <?php echo get_the_date(); ?></span>
+			</div>
+		<?php endif;?>
 
 	</header><!-- .entry-header -->
 
@@ -67,7 +67,7 @@
 	<?php else : ?>
 	<div class="entry-summary">
 
-		<a class="listen-link" href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark">
+		<a id="listen" class="more-link" href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark">
 		Listen here
 	</a>
 	</div><!-- .entry-summary -->

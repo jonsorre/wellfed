@@ -230,6 +230,7 @@ function tasman_scripts() {
 	wp_enqueue_style( 'tasman-style', get_theme_file_uri( "/style$suffix.css" ) );
 	wp_style_add_data( 'tasman-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'custom-font-style', get_theme_file_uri( "/var.css" ) );
+	wp_enqueue_style( 'custom-fonts', get_theme_file_uri( "/fonts/wf-fonts.css" ) );
 	wp_enqueue_style( 'email-form-styling', get_theme_file_uri( "/email-form.css" ) );
 
 

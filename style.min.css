@@ -21,7 +21,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
 
 html {
-    font-family: sans-serif;
+    font-family: var(--hed-font);
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%
 }
@@ -254,7 +254,7 @@ h6 {
 }
 
 p {
-    margin: 0 0 1.5rem;
+    margin: 0 0 30px;
     font-size: var(--body);
     font-family: var(--body-font);
     line-height:var(--body-line-height);
@@ -781,7 +781,7 @@ a:hover {
 }
 
 .social-navigation {
-    margin-bottom: 1.5rem
+    margin-bottom: 80px;
 }
 
 .social-navigation li,
@@ -1077,12 +1077,17 @@ a:hover {
     height:375px;
 }
 
-.site-logo {
+.header-logo {
     position:absolute;
     max-width:150px;
     left: 50%;
     margin-left: -75px;
     top: 30px;
+}
+
+.footer-logo {
+    max-width:150px;
+    margin:30px auto 80px;
 }
 
 .custom-header-media {
@@ -1183,10 +1188,10 @@ a:hover {
     font-size:var(--hed-l);
     font-family:var(--hed-font);
     line-height:var(--hed-line-height);
-    -webkit-text-fill-color: var(--brand-color);
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: var(--fill-color);
-    margin-bottom:10px;
+    /*-webkit-text-fill-color: rgba(239, 53, 62, 0);*/
+    /*-webkit-text-stroke-width: 1.5px;*/
+    /*-webkit-text-stroke-color: var(--fill-color);*/
+    color:white;
 }
 
 .site-branding p {
@@ -1224,7 +1229,7 @@ a.custom-logo-link {
 }
 
 .site-content {
-    padding-top: 3rem
+    padding-top: 60px;
 }
 
 .site-footer {
@@ -1238,10 +1243,17 @@ a.custom-logo-link {
 
 .page-navigation li {
     display: inline;
+    font-size:var(--hed-m);
+    padding:0 10px;
 }
 
 .footer-link {
     color:white;
+}
+
+#copyright-text {
+    font-size:var(--hed-s);
+    font-family:var(--body-font);
 }
 
 .site-designer {
@@ -1301,7 +1313,7 @@ a.custom-logo-link {
 }
 
 .entry {
-    margin: 0 0 3rem;
+    margin: 0 0 60px;
     word-wrap: break-word
 }
 
@@ -1389,10 +1401,11 @@ a.custom-logo-link {
     position: relative;
     font-size: var(--hed-l-s);
     font-family: var(--hed-font);
-    line-height:var(--hed-line-height);
+    line-height:var(--alt-hed-line-height);
     -webkit-text-fill-color: var(--fill-color);
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: var(--brand-color);
+    margin-bottom:20px;
     /*text-transform: uppercase*/
 }
 
@@ -1415,11 +1428,25 @@ a.custom-logo-link {
 
 .entry-summary {
     text-align:center;
+    margin-top:20px;
+}
+
+.single-content .site-content {
+    padding-top:0px;
+}
+
+.single-content .entry-header {
+    border-bottom:1px solid var(--brand-color);
+    max-width:640px;
+    margin:0 auto 30px;
 }
 
 .single-content .entry-title {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem
+    margin-bottom: 30px;
+}
+
+.single-content .entry-dek {
+    margin-bottom: 30px;
 }
 
 /*.single-content .entry-title:after,
@@ -1466,14 +1493,16 @@ a.custom-logo-link {
 }
 
 .entry-media {
-    margin-bottom: 1.5rem
+    margin-bottom: 30px;
+    font-family:var(--body-font);
+    font-size:var(--hed-s);
 }
 
 .post-thumbnail {
     display: inline-block;
     overflow: hidden;
     position: relative;
-    margin-bottom: 1.5rem;
+    margin-bottom: 10px;
     background-color: #000
 }
 
@@ -1528,8 +1557,16 @@ a.custom-logo-link {
     border: 10px solid rgba(0, 0, 0, .05)
 }
 
-a.more-link {
-    font-weight: 700
+a#listen:before {
+    content:"▶";
+    font-size:1rem;
+}
+
+.more-link {
+    font-family: var(--body-font);
+    font-size: var(--body);
+    border-bottom: 1px solid red;
+    line-height: var(--body-line-height);
 }
 
 .entry-footer {
@@ -1560,11 +1597,10 @@ a.more-link {
     margin-right: 1rem
 }
 
-.archive .entry-footer,
+/*.archive .entry-footer,
 .home .entry-footer {
     padding-bottom: 3rem;
-    border-bottom: 1px solid rgba(0, 0, 0, .1)
-}
+}*/
 
 .archive .entry:last-child .entry-footer,
 .home .entry:last-child .entry-footer {
@@ -3201,7 +3237,7 @@ object {
 
 @media (min-width:992px) {
     .has-header-image .site-header {
-        height: 75vh
+        height: 80vh
     }
     .has-header-image:not(.has-header-video) .wp-custom-header {
         -webkit-animation: fadein .5s ease-in-out backwards;
