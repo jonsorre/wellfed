@@ -816,7 +816,11 @@ a:hover {
 .posts-navigation {
     clear: both;
     overflow: hidden;
-    border-top: 1px solid rgba(0, 0, 0, .05)
+    /*border-top: 1px solid rgba(0, 0, 0, .05)*/
+}
+
+.site-main {
+    padding:0 15px;
 }
 
 .site-main .comment-navigation,
@@ -848,8 +852,8 @@ a:hover {
     color: #404040;
     font-size: 14px;
     font-size: .875rem;
-    font-weight: 700;
-    text-transform: uppercase
+    /*font-weight: 700;*/
+    /*text-transform: uppercase*/
 }
 
 .comment-navigation a span,
@@ -900,16 +904,20 @@ a:hover {
 .posts-navigation .nav-previous a {
     display: block;
     padding: 1.5rem 1rem;
-    color: #404040;
+    color: var(--brand-color);
     -webkit-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out
+    transition: all .1s ease-in-out;
+    font-size:var(--hed-m);
+    text-transform:capitalize;
 }
 
 .posts-navigation .nav-next a:focus,
 .posts-navigation .nav-next a:hover,
 .posts-navigation .nav-previous a:focus,
 .posts-navigation .nav-previous a:hover {
-    color: var(--brand-color)
+    /*color: var(--brand-color);*/
+    /*text-decoration:underline;*/
+    opacity:.5;
 }
 
 .pagination {
@@ -1342,8 +1350,8 @@ a.custom-logo-link {
 .not-found,
 .page-header,
 .post-thumbnail {
-    margin-right: 1rem;
-    margin-left: 1rem;
+    /*margin-right: 1rem;*/
+    /*margin-left: 1rem;*/
 }
 
 .not-found {
@@ -1432,7 +1440,8 @@ a.custom-logo-link {
 }
 
 .single-content .site-content {
-    padding-top:0px;
+    padding:0px 15px 0px;
+
 }
 
 .single-content .entry-header {
@@ -2818,6 +2827,12 @@ object {
     stroke-width: 0
 }
 
+svg.icon.icon-top {
+    left:-2px;
+    width:40px !important;
+    height:29px !important;
+}
+
 .twitter-tweet {
     margin-right: auto;
     margin-left: auto
@@ -3182,7 +3197,7 @@ object {
         left: 50%;
         width: 1px;
         height: 100%;
-        background-color: #eceff1;
+        /*background-color: #eceff1;*/
         content: " "
     }
     .page-numbers {
