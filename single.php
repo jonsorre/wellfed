@@ -21,9 +21,12 @@ get_header(); ?>
 				get_template_part( 'template-parts/biography' );
 			}
 
+			$next_post = get_next_post();
+			$previous_post = get_previous_post();
+
 			the_post_navigation( array(
-			    'prev_text'                  => __( '<span>&larr; previous post</span> %title', 'tasman' ),
-			    'next_text'                  => __( '<span>next post &rarr;</span> %title', 'tasman' ),
+			    'prev_text'                  => __( '%title' . get_the_post_thumbnail($previous_post->ID,'full'), 'tasman' ),
+			    'next_text'                  => __( '%title' . get_the_post_thumbnail($next_post->ID,'full'), 'tasman' ),
 			    'screen_reader_text'		 => __( 'Continue Reading', 'tasman' ),
 			) );
 
